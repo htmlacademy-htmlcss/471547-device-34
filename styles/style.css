@@ -25,7 +25,7 @@
     font-family: "Raleway";
     font-style: normal;
     font-weight: 800;
-    src: url("fonts/raleway/raleway-800.woff2") format("woff2");
+    src: url("../fonts/fonts/raleway/raleway-800.woff2") format("woff2");
     font-display: swap;
 }
 
@@ -33,7 +33,7 @@
     font-family: "Rubik";
     font-style: normal;
     font-weight: 400;
-    src: url("fonts/rubik/rubik-400.woff2") format("woff2");
+    src: url("../fonts/fonts/rubik/rubik-400.woff2") format("woff2");
     font-display: swap;
 }
 
@@ -41,7 +41,7 @@
     font-family: "Rubik";
     font-style: normal;
     font-weight: 700;
-    src: url("fonts/rubik/rubik-700.woff2") format("woff2");
+    src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
     font-display: swap;
 }
 
@@ -49,7 +49,7 @@
     font-family: "Rubik";
     font-style: normal;
     font-weight: 800;
-    src: url("fonts/rubik/rubik-800.woff2") format("woff2");
+    src: url("../fonts/rubik/rubik-800.woff2") format("woff2");
     font-display: swap;
 }
 
@@ -131,7 +131,7 @@ h2 {
 /* Общее */
 
 .header-top {
-    height: 300px;
+    min-height: 300px;
     margin-top: 40px;
     background-color: var(--yellow);
     color: var(--black);
@@ -194,6 +194,7 @@ h2 {
 } */
 
 .header-top-nav-right {
+    list-style: none;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -201,7 +202,7 @@ h2 {
     width: 240px;
 }
 
-.header-top-nav-right a:not(:last-child) {
+.header-top-nav-right li:not(:last-child) {
     margin-right: 61px;
 }
 
@@ -241,15 +242,18 @@ h2 {
 
 .dropdown {
     margin-right: auto;
+    display: flex;
+    align-items: center;
 }
 
 .header-undertop-right {
     width: 471px;
     display: flex;
     justify-content: flex-end;
+    list-style: none;
 }
 
-.header-undertop-right a:not(:last-child) {
+.header-undertop-right li:not(:last-child) {
     margin-right: 50px;
 }
 
@@ -342,12 +346,15 @@ h2 {
 
 .items {
     display: flex;
+    flex-wrap: wrap;
     margin: 0 auto;
     padding: 0;
+    list-style: none;
 }
 
 .item {
     list-style-type: none;
+    max-width: 160px;
 }
 
 .item:not(:last-child) {
@@ -477,7 +484,7 @@ h2 {
     position: absolute;
     content: " ";
     top: 35%;
-    width: 152.73px;
+    width: 152px;
     height: 8px;
     background-color: var(--yellow);
     z-index: -1;
@@ -525,7 +532,7 @@ h2 {
     letter-spacing: 0.2em;
 }
 
-.delivery-on-order-left-icon {
+.delivery-on-order-icon {
     width: 125px;
     height: 100px;
     background-color: var(--yellow);
@@ -535,7 +542,7 @@ h2 {
     background-position: center;
 }
 
-.delivery-on-order-right-icon {
+.delivery-info-icon {
     width: 125px;
 }
 
@@ -544,6 +551,10 @@ h2 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.delivery-info-link {
+    cursor: pointer;
 }
 
 
@@ -876,6 +887,7 @@ p.contacts-name {
 
 .breadcrumbs-item {
     list-style-type: none;
+    position: relative;
 }
 
 .breadcrumbs-item:not(:last-child) {
@@ -883,6 +895,9 @@ p.contacts-name {
 }
 
 .breadcrumbs-item:not(:last-child)::after {
+    position: absolute;
+    left: calc(100% + 16px);
+    top: 30%;
     content: "";
     display: block;
     width: 4px;
@@ -983,13 +998,14 @@ p.contacts-name {
 
 .product-image {
     width: 360px;
-    height: 380px;
+    min-height: 380px;
     margin-bottom: 32px;
     display: block;
 }
 
 .product-price {
     line-height: 21.33px;
+    font-weight: 400;
     color: var(--dark);
 }
 
