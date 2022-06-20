@@ -182,8 +182,13 @@ h2 {
     margin-left: auto;
 }
 
+.header-login,
+.header-basket,
+.header-compare {
+    position: relative;
+}
 
-/* .header-login::before {
+.header-login::before {
     display: block;
     content: "";
     width: 15px;
@@ -191,7 +196,10 @@ h2 {
     background-image: url('../images/icons/header/login-icon.svg');
     background-repeat: no-repeat;
     background-size: contain;
-} */
+    position: absolute;
+    top: 9px;
+    left: -20px;
+}
 
 .header-top-nav-right {
     list-style: none;
@@ -206,8 +214,7 @@ h2 {
     margin-right: 61px;
 }
 
-
-/* .header-compare::before {
+.header-compare::before {
     display: block;
     content: "";
     width: 10px;
@@ -215,10 +222,12 @@ h2 {
     background-image: url('../images/icons/header/compare-icon.svg');
     background-repeat: no-repeat;
     background-size: contain;
-} */
+    position: absolute;
+    top: 5px;
+    left: -15px;
+}
 
-
-/* .header-basket::before {
+.header-basket::before {
     display: block;
     content: "";
     width: 13px;
@@ -226,7 +235,25 @@ h2 {
     background-image: url('../images/icons/header/basket-icon.svg');
     background-repeat: no-repeat;
     background-size: contain;
-} */
+    position: absolute;
+    top: 5px;
+    left: -20px;
+}
+
+.header-basket::after {
+    display: block;
+    content: "2";
+    width: 21px;
+    height: 21px;
+    background-color: var(--white);
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: -35px;
+}
 
 
 /* Вторая строка в header-меню */
@@ -244,6 +271,7 @@ h2 {
     margin-right: auto;
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .header-undertop-right {
@@ -257,14 +285,15 @@ h2 {
     margin-right: 50px;
 }
 
-
-/* .dropdown::after {
+.dropdown::after {
     display: block;
     content: "";
     width: 50px;
     height: 50px;
     background-image: url('../images/icons/header/catalog-dropdown-icon.svg');
-} */
+    position: absolute;
+    left: calc(100% + 18px);
+}
 
 
 /* Header slider */
@@ -278,7 +307,7 @@ h2 {
     display: flex;
     list-style-type: none;
     position: relative;
-    bottom: 32px;
+    bottom: 66px;
 }
 
 .header-slider-image {
@@ -843,6 +872,10 @@ p.contacts-name {
 
 .header-top-catalog {
     height: 186px;
+}
+
+.header-login-catalog {
+    opacity: 30%;
 }
 
 
