@@ -204,6 +204,7 @@ h2 {
 .header-top-nav-right {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: flex-end;
     margin-left: auto;
@@ -253,6 +254,7 @@ h2 {
     align-items: center;
     top: 0;
     left: -35px;
+    font-size: 14px;
 }
 
 
@@ -260,6 +262,7 @@ h2 {
 
 .header-undertop {
     display: flex;
+    flex-wrap: wrap;
     font-family: "Raleway", sans-serif;
     font-weight: 800;
     line-height: 21.13px;
@@ -591,6 +594,7 @@ h2 {
 
 .about {
     display: flex;
+    flex-wrap: wrap;
     margin-bottom: 80px;
 }
 
@@ -748,6 +752,7 @@ p.contacts-name {
 .footer-content {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     margin-bottom: 62px;
 }
 
@@ -766,6 +771,7 @@ p.contacts-name {
 .footer-nav {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     width: 60%;
     padding: 0;
     font-family: "Raleway", sans-serif;
@@ -782,6 +788,7 @@ p.contacts-name {
 
 .footer-bottom {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .footer-partner {
