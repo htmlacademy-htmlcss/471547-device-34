@@ -1065,6 +1065,10 @@ p.contacts-name {
     display: block;
 }
 
+.product-image img {
+    object-fit: contain;
+}
+
 .product-item-bottom {
     display: flex;
     justify-content: space-between;
