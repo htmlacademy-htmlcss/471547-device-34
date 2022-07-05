@@ -137,6 +137,10 @@ h2 {
     color: var(--black);
 }
 
+.header-top-catalog {
+    min-height: 186px;
+}
+
 .header-inner-container {
     width: 1040px;
     display: flex;
@@ -167,6 +171,10 @@ h2 {
     display: flex;
     align-items: center;
     margin-bottom: 45px;
+}
+
+.header-top-nav-catalog {
+    margin-bottom: 0;
 }
 
 .header-top-nav-left {
@@ -201,18 +209,27 @@ h2 {
     left: -20px;
 }
 
-.header-top-nav-right {
+.header-top-nav-right,
+.header-top-nav-right-catalog {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: flex-end;
     margin-left: auto;
-    width: 240px;
+    min-width: 240px;
 }
 
 .header-top-nav-right li:not(:last-child) {
     margin-right: 61px;
+}
+
+.header-top-nav-right-catalog li:not(:last-child) {
+    margin-right: 51px;
+}
+
+.header-top-nav-right-catalog {
+    min-width: 300px;
 }
 
 .header-compare::before {
@@ -278,14 +295,15 @@ h2 {
 }
 
 .header-undertop-right {
-    width: 471px;
+    max-width: 471px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-end;
     list-style: none;
 }
 
 .header-undertop-right li:not(:last-child) {
-    margin-right: 50px;
+    margin-right: 40px;
 }
 
 .dropdown::after {
@@ -442,7 +460,7 @@ h2 {
 
 .delivery {
     background-color: var(--light);
-    height: 289px;
+    min-height: 289px;
     margin-bottom: 70px;
 }
 
@@ -812,6 +830,7 @@ p.contacts-name {
     margin: 0 auto;
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
 }
 
@@ -878,7 +897,7 @@ p.contacts-name {
 }
 
 .header-top-catalog {
-    height: 186px;
+    min-height: 186px;
 }
 
 .header-login-catalog {
@@ -1017,8 +1036,9 @@ p.contacts-name {
 /* Сетка с товарами */
 
 .products-list {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 360px 360px;
+    gap: 32px;
     margin: 0;
     padding-top: 70px;
     padding-bottom: 44px;
@@ -1030,17 +1050,24 @@ p.contacts-name {
     flex-direction: column;
     margin-bottom: 44px;
     list-style-type: none;
+    max-width: 360px;
+    min-height: 380px;
 }
 
-.products-item:nth-child(odd) {
+
+/* .products-item:nth-child(odd) {
     margin-right: 40px;
-}
+} */
 
 .product-image {
     width: 360px;
-    min-height: 380px;
     margin-bottom: 32px;
     display: block;
+}
+
+.product-item-bottom {
+    display: flex;
+    justify-content: space-between;
 }
 
 .product-price {
@@ -1055,6 +1082,7 @@ p.contacts-name {
     letter-spacing: -0.02em;
     text-decoration: none;
     color: inherit;
+    width: 55%;
 }
 
 .load-more-btn {
