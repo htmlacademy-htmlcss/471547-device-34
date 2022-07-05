@@ -295,14 +295,15 @@ h2 {
 }
 
 .header-undertop-right {
-    width: 471px;
+    max-width: 471px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-end;
     list-style: none;
 }
 
 .header-undertop-right li:not(:last-child) {
-    margin-right: 50px;
+    margin-right: 40px;
 }
 
 .dropdown::after {
@@ -896,7 +897,7 @@ p.contacts-name {
 }
 
 .header-top-catalog {
-    height: 186px;
+    min-height: 186px;
 }
 
 .header-login-catalog {
@@ -1035,8 +1036,9 @@ p.contacts-name {
 /* Сетка с товарами */
 
 .products-list {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 360px 360px;
+    gap: 32px;
     margin: 0;
     padding-top: 70px;
     padding-bottom: 44px;
@@ -1049,17 +1051,23 @@ p.contacts-name {
     margin-bottom: 44px;
     list-style-type: none;
     max-width: 360px;
+    min-height: 380px;
 }
 
-.products-item:nth-child(odd) {
+
+/* .products-item:nth-child(odd) {
     margin-right: 40px;
-}
+} */
 
 .product-image {
     width: 360px;
-    min-height: 380px;
     margin-bottom: 32px;
     display: block;
+}
+
+.product-item-bottom {
+    display: flex;
+    justify-content: space-between;
 }
 
 .product-price {
@@ -1074,6 +1082,7 @@ p.contacts-name {
     letter-spacing: -0.02em;
     text-decoration: none;
     color: inherit;
+    width: 55%;
 }
 
 .load-more-btn {
